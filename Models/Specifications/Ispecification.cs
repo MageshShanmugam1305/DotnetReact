@@ -2,7 +2,7 @@
 
 namespace FixedWidthParser.Models.Specifications
 {
-    public interface Ispecification<T> where T : IRecord 
+    public interface Ispecification<T> where T : IValidator 
     {
         HolderRecord record { get; set; }
         Func<HolderRecord, bool> condition { get; set; }

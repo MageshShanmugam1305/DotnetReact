@@ -2,7 +2,7 @@
 
 namespace FixedWidthParser.Models.RecordTypes
 {
-    public class HolderRecord : RecordBase, IRecord 
+    public class HolderRecord : RecordBase, IValidator 
     {
         private HolderRecordSpecConfig config;
         public HolderRecord(string line, int rowIdx, IErrorTrace errorTrace): base(line, rowIdx, errorTrace) {

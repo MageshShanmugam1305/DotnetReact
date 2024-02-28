@@ -1,4 +1,5 @@
 using FixedWidthParser.Models;
+using FixedWidthParser.Models.RecordFormat;
 
 namespace FixedWidthParser
 {
@@ -15,7 +16,12 @@ namespace FixedWidthParser
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddScoped<IErrorTrace, ErrorTrace>();
+            builder.Services.AddSingleton<RecordFormat>((prov) => {
+                RecordFormat recordFormat = new RecordFormat();
+                recordFormat = builder.Configuration.GetSection("RecordFormat").Get<RecordFormat>();
+                return recordFormat;
 
+            } );
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

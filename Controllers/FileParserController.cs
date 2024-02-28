@@ -1,4 +1,5 @@
 ﻿using FixedWidthParser.Models;
+using FixedWidthParser.Models.RecordFormat;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,11 +12,13 @@ namespace FixedWidthParser.Controllers
     {
         private readonly ILogger<FileParserController> logger;
         private IErrorTrace errorTrace;
+        private RecordFormat recordFormat;
 
-        public FileParserController(ILogger<FileParserController> logger, IErrorTrace errorTrace )
+        public FileParserController(ILogger<FileParserController> logger, IErrorTrace errorTrace, RecordFormat format )
         {
             this.logger = logger;
             this.errorTrace = errorTrace;
+            this.recordFormat = format;
         }
         [HttpGet]
         public IActionResult ParseFile(string file)

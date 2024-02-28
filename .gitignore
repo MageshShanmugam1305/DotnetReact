@@ -396,3 +396,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/.vs/DotnetReact/v17/.wsuo
+/.vs/DotnetReact/v17/.wsuo
+/.vs/slnx.sqlite
+/.vs/DotnetReact/FileContentIndex/c95daa39-1117-4e3f-9e5c-fc2345617502.vsidx
+/.vs/DotnetReact/FileContentIndex/7199fd31-120c-4155-9e43-23192818da11.vsidx
+/.vs/DotnetReact/FileContentIndex/6599a872-bab5-490e-933b-01671148637c.vsidx

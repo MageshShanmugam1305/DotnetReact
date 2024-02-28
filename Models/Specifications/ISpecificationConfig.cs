@@ -2,7 +2,7 @@
 
 namespace FixedWidthParser.Models.Specifications
 {
-    public interface ISpecificationConfig<T> where T: IRecord
+    public interface ISpecificationConfig<T> where T: IValidator
     {
         List<Ispecification<T>> specifications { get; set; }
 
